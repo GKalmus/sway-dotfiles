@@ -20,6 +20,7 @@ set $term ghostty
 ### Autostart
 exec swaybg -m fill -i $wallpaper
 exec waybar
+exec nm-applet
 
 ### Key bindings
 
@@ -36,9 +37,9 @@ bindsym $mod+Shift+r reload
 # Exit sway
 bindsym $mod+Shift+e exec swaymsg exit
 #Screenshot
-bindsym $mod+b 			exec sh ~/.config/sway/scripts/screenshot.sh
+bindsym $mod+b exec sh ~/.config/sway/scripts/screenshot.sh
 #Lock
-bindsym Control+$mod+l 	exec sh ~/.config/sway/scripts/lock.sh
+bindsym Control+$mod+l exec sh ~/.config/sway/scripts/lock.sh
 
 # Moving around:
 
