@@ -1,0 +1,88 @@
+{
+	"layer": "top",
+	"position": "bottom",
+	"margin": 0,
+	"modules-left": [
+		"sway/workspaces",
+		"custom/separator",
+		"sway/window"
+	],
+	"modules-center": [
+		"clock#time"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"custom/separator",
+		"memory",
+		"custom/separator",
+		"cpu",
+		"custom/separator",
+		"clock#date",
+		"custom/separator",
+		"battery",
+		"tray"
+	],
+	"sway/window": {
+		"max-length": 50,
+		"swap-icon-label": true,
+	},
+	"cpu": {
+		"interval": 1,
+		"format": " {usage}%",
+		"tooltip": false
+	},
+	"sway/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"1": "I",
+			"2": "II",
+			"3": "III",
+			"4": "IV",
+			"5": "V",
+			"6": "VI",
+			"7": "VII",
+			"8": "VIII",
+			"9": "IX",
+			"10": "X"
+		}
+	},
+	"pulseaudio": {
+		"format": " {volume}%",
+		"format-muted": " muted",
+		"scroll-step": 1,
+		"on-click": "pavucontrol",
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		]
+	},
+	"memory": {
+		"interval": 1,
+		"format": " {percentage}%",
+		"tooltip": false
+	},
+	"battery": {
+		"interval": 5,
+		"states": {
+			"warning": 20,
+			"critical": 5,
+		},
+		"format": "{capacity}%",
+		"tooltip": false
+	},
+	"clock#date": {
+		"interval": 1,
+		"format": "{:L%A %d. %B}",
+		"locale": "fi_FI.UTF-8",
+		"tooltip": false
+	},
+	"clock#time": {
+		"interval": 1,
+		"format": "{:%H:%M:%S}",
+		"tooltip": false
+	},
+	"custom/separator": {
+		"format": "//",
+		"interval": "once",
+		"tooltip": false
+	}
+}
